@@ -80,7 +80,24 @@ Hooks.on("init", () => {
     let oldContext = CONFIG.ui.scenes.prototype._getEntryContextOptions;
     CONFIG.ui.scenes.prototype._getEntryContextOptions = function () {
         let options = oldContext.call(this);
-        let idx = options.findIndex(o => o.label === "SIDEBAR.Export");
+
+        let idx = options.findIndex(o => o.label === "SIDEBAR.Edit");
+        if (idx == -1) {
+            var permission = {
+                label: "SIDEBAR.Edit",
+                icon: '<i class="fas fa-edit"></i>',
+                visible: () => game.user.isGM,
+                callback: async (li) => {
+                    const { entryId } = li.closest("[data-entry-id]").dataset;
+                    const document = this.collection.get(entryId) ?? await this.collection.getDocument(entryId);
+                    document.sheet.render(true);
+                }
+            };
+            let idx = options.findIndex(o => o.label === "SCENE.View")
+            options.splice(idx + 1, 0, permission);
+        }
+
+        idx = options.findIndex(o => o.label === "SIDEBAR.Export");
         if (idx != -1) {
             var permission = {
                 label: "OWNERSHIP.Configure",

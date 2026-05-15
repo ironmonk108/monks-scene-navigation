@@ -354,11 +354,16 @@
     position: absolute;
     left: 205px;
     flex-direction: row-reverse;
-    gap: 0px;
-    height: calc(var(--control-size) + 5px);
-    --max-levels: 3;
+    gap: 1px;
+    height: calc(3 * (var(--control-size) + 0.5rem));
     padding: 0px;
     margin-left: 5px;
+    min-width: calc(100vw - 700px);
+    max-width: calc(100vw - 700px);
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    align-content: flex-start;
 }
 
 #scene-navigation menu#scene-navigation-levels li.level-row {
@@ -366,7 +371,7 @@
 }
 
 #scene-navigation menu#scene-navigation-levels li.level-row > div {
-    border-radius: 0px;
+    border-radius: 2px;
     width: unset;
 }
 
