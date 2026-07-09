@@ -1,8 +1,10 @@
 {
   "MonksSceneNavigation.RemoveNav": "Usuń nawigację",
-  "MonksSceneNavigation.GoBack": "Powrót do poprzedniej sceny",
   "MonksSceneNavigation.SetViewPosition": "Ustaw pozycję wyświetlania",
   "MonksSceneNavigation.PullAllPlayers": "Wciągnij wszystkich graczy do tej sceny",
+  "MonksSceneNavigation.ReturnLastScene": "Powrót do: {lastScene}",
+  "MonksSceneNavigation.NoPreviousScene": "Brak poprzedniej sceny",
+  "MonksSceneNavigation.ViewArtwork": "Wyświetl grafikę",
 
   "MonksSceneNavigation.click-to-view.name": "Kliknij, aby wyświetlić",
   "MonksSceneNavigation.click-to-view.hint": "Kliknij, aby wyświetlić scenę zamiast ją konfigurować.",
