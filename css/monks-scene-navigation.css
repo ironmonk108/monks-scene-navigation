@@ -364,6 +364,7 @@
     flex-wrap: wrap;
     row-gap: 5px;
     align-content: flex-start;
+    pointer-events: none;
 }
 
 #scene-navigation menu#scene-navigation-levels li.level-row {
@@ -383,6 +384,10 @@
 #scene-navigation menu#scene-navigation-levels li.level-row:last-child > div {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+}
+
+#scene-navigation menu#scene-navigation-levels li.level-row > .scene-level {
+	pointer-events: auto;
 }
 
 #scene-navigation #scene-navigation-active {
